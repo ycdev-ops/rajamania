@@ -42,10 +42,10 @@ export default function Home() {
                 </div>
             </section>
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-2">
-                 <GameCard title="Sports+" icon="/_nuxt/img/sports-muted.aba62f9.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/sport.png" cta="Main Sports+" />
-                 <GameCard title="Lotto" icon="/_nuxt/img/lotto-muted.42a4023.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/lotto.png" cta="Main Lotto" />
-                 <GameCard title="Poker" icon="/_nuxt/img/poker-muted.a0c9bb9.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/poker.png" cta="Main Poker" />
-                 <GameCard title="Fishing" icon="/_nuxt/img/fishing-muted.3bbc777.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/fishing.png" cta="Main Fishing" />
+                 <GameCard title="Sports+" icon="https://rajamaniaman.com/img/menu/sports.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/sport.png" cta="Main Sports+" />
+                 <GameCard title="Lotto" icon="https://rajamaniaman.com/img/menu/lotto.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/lotto.png" cta="Main Lotto" />
+                 <GameCard title="Poker" icon="https://rajamaniaman.com/img/menu/poker.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/poker.png" cta="Main Poker" />
+                 <GameCard title="Fishing" icon="https://rajamaniaman.com/img/menu/fishing.svg" image="https://cdn-proxy.globalcontentcloud.com/common/default/fishing.png" cta="Main Fishing" />
             </section>
           </main>
           <Footer />

@@ -32,7 +32,7 @@ export const GameShowcase = () => {
         <div className="bg-secondary p-4 rounded-md my-2">
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
-                    <Image src="/_nuxt/img/slots-muted.a305ba0.svg" width={32} height={32} alt="Slots" />
+                    <Image src="https://rajamaniaman.com/img/menu/slots.svg" width={32} height={32} alt="Slots" />
                     <h3 className="text-lg font-bold text-white">Slots</h3>
                 </div>
                 <Button variant="outline" size="sm" className="text-xs rounded-sm">Lihat semua</Button>
