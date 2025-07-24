@@ -37,9 +37,9 @@ const accountNav = [
 export const MobileNav = () => {
     return (
         <div className="flex flex-col h-full text-white bg-[#4a5059]">
-            <SidebarHeader className="bg-[#060d18] p-4">
+            <SidebarHeader className="bg-[#060d18] w-[300px] h-[206px] p-0 m-0 border-0 text-white text-base font-normal text-left">
                 <nav>
-                    <ul className="flex items-center gap-4 overflow-x-auto pb-2 -mb-2 no-scrollbar">
+                    <ul className="flex items-center gap-4 overflow-x-auto p-4 pb-2 -mb-2 no-scrollbar">
                         {gameCategories.map(cat => (
                             <li key={cat.name} className="flex-shrink-0">
                                 <a href={cat.href} className="flex flex-col items-center justify-center text-center space-y-2 text-xs font-bold w-16">
