@@ -19,20 +19,20 @@ const gameCategories = [
 ];
 
 const mainNav = [
-    { name: "Beranda", icon: Home, href: "/" },
-    { name: "Promosi", icon: ThumbsUp, href: "#" },
-    { name: "Deposit", icon: Handshake, href: "/user/deposit" },
-    { name: "Bonus", icon: Gift, href: "#" },
-    { name: "Withdraw", icon: ArrowUp, href: "/user/withdraw" },
-    { name: "Leaderboard", icon: Star, href: "#" },
+    { name: "Beranda", Icon: Home, href: "/" },
+    { name: "Promosi", Icon: ThumbsUp, href: "#" },
+    { name: "Deposit", Icon: Handshake, href: "/user/deposit" },
+    { name: "Bonus", Icon: Gift, href: "#" },
+    { name: "Withdraw", Icon: ArrowUp, href: "/user/withdraw" },
+    { name: "Leaderboard", Icon: Star, href: "#" },
 ]
 
 const accountNav = [
-    { name: "Informasi Akun", icon: User, href: "/user/account"},
-    { name: "Referral", icon: User, href: "#"},
-    { name: "Inbox", icon: Mail, href: "/user/activity", badge: 1},
-    { name: "Aktivitas", icon: Activity, href: "/user/activity"},
-    { name: "Riwayat Bermain", icon: History, href: "/user/history"},
+    { name: "Informasi Akun", Icon: User, href: "/user/account"},
+    { name: "Referral", Icon: User, href: "#"},
+    { name: "Inbox", Icon: Mail, href: "/user/activity", badge: 1},
+    { name: "Aktivitas", Icon: Activity, href: "/user/activity"},
+    { name: "Riwayat Bermain", Icon: History, href: "/user/history"},
 ]
 
 export const MobileNav = () => {
@@ -73,7 +73,7 @@ export const MobileNav = () => {
                         {mainNav.map(item => (
                             <li key={item.name} className="border-b border-white/10">
                                 <Link href={item.href} className="flex items-center p-4 gap-4 text-sm font-bold hover:bg-black/10">
-                                    <item.icon className="h-6 w-6 text-primary" />
+                                    <item.Icon className="h-6 w-6 text-primary" />
                                     <span>{item.name}</span>
                                 </Link>
                             </li>
@@ -92,7 +92,7 @@ export const MobileNav = () => {
                                             {accountNav.map(item => (
                                                 <li key={item.name} className="border-b border-white/10 last:border-b-0">
                                                     <Link href={item.href} className="flex items-center p-4 pl-8 gap-4 text-sm font-bold hover:bg-black/20">
-                                                         <item.icon className="h-6 w-6 text-primary" />
+                                                         <item.Icon className="h-6 w-6 text-primary" />
                                                          <span>{item.name}</span>
                                                          {item.badge && <span className="ml-auto bg-red-600 text-white text-xs font-bold rounded-full px-2 py-0.5">{item.badge}</span>}
                                                     </Link>
