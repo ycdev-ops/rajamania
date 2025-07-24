@@ -38,29 +38,21 @@ const accountNav = [
 export const MobileNav = () => {
     return (
         <div className="flex flex-col h-full text-white bg-[#4a5059]">
-            <SidebarHeader className="bg-[#060d18] w-[300px] h-[206px] p-0 m-0 border-0" />
-            <nav className="absolute top-0 left-0 w-full p-4">
-                <ul className="flex items-center gap-4 overflow-x-auto no-scrollbar">
-                    {gameCategories.map(cat => (
-                        <li key={cat.name} className="flex-shrink-0">
-                            <a href={cat.href} className="flex flex-col items-center justify-center text-center space-y-2 text-xs font-bold w-16 text-white">
-                                <Image src={cat.icon} alt={cat.name} width={32} height={32} className="w-8 h-8" />
-                                <span className="truncate w-full">{cat.name}</span>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-            <SidebarContent className="flex-grow mt-[-130px]">
-                <style jsx>{`
-                    .no-scrollbar::-webkit-scrollbar {
-                        display: none;
-                    }
-                    .no-scrollbar {
-                        -ms-overflow-style: none;
-                        scrollbar-width: none;
-                    }
-                `}</style>
+            <SidebarHeader className="bg-[#060d18] p-4">
+                 <nav>
+                    <ul className="grid grid-cols-4 gap-4">
+                        {gameCategories.map(cat => (
+                            <li key={cat.name}>
+                                <a href={cat.href} className="flex flex-col items-center justify-center text-center space-y-2 text-xs font-bold text-white">
+                                    <Image src={cat.icon} alt={cat.name} width={32} height={32} className="w-8 h-8" />
+                                    <span className="truncate w-full">{cat.name}</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </SidebarHeader>
+            <SidebarContent className="flex-grow">
                 <nav>
                     <ul>
                         <li>
