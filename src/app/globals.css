@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%; /* #111827 */
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 45 93% 47%; /* Gold */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 17%; /* #1d2b43 */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 215 20% 65%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 57% 6%; /* #060d18 */
+    --foreground: 0 0% 100%;
+    --card: 220 29% 15%; /* #1d2b43 */
+    --card-foreground: 0 0% 100%;
+    --popover: 220 57% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 48 95% 45%; /* #dfbb06 */
+    --primary-foreground: 0 0% 0%;
+    --secondary: 222 9% 31%; /* #4a5059 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 222 9% 31%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 220 29% 15%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 9% 31%;
+    --input: 222 9% 31%; /* Changed from #060d18 */
+    --ring: 48 95% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+.btn {
+    @apply h-[34px] text-white whitespace-nowrap px-4 font-bold text-sm text-center rounded-sm transition-colors duration-200 ease-in;
+}
+.btn:disabled, .btn:hover:disabled{
+    @apply cursor-not-allowed text-white/40 bg-secondary;
+}
+
+.btn--flex{
+    @apply flex items-center justify-center;
+}
+.btn--light{
+    @apply text-white bg-secondary;
+}
+@media(hover:hover) {
+    .btn--light:hover{
+        @apply bg-[#3e434b];
+    }
+}
+.btn--dark{
+  @apply text-white bg-background;
+}
+@media(hover:hover) {
+    .btn--dark:hover{
+        @apply bg-black/50;
+    }
+}
+.btn--accent{
+    @apply text-white bg-[#c20c05];
+}
+@media(hover:hover){
+    .btn--accent:hover{
+        @apply bg-[#a90a04];
+    }
+}
+.btn--accent-secondary{
+    @apply text-white bg-[#0ca18a];
+}
+@media(hover:hover){
+    .btn--accent-secondary:hover{
+        @apply bg-[#0a8976];
+    }
+}
+.btn--brand {
+    @apply text-black bg-primary;
+}
+@media(hover:hover){
+    .btn--brand:hover{
+        @apply bg-yellow-500;
+    }
+}
+.btn--success{
+    @apply text-white bg-green-600;
+}
+@media(hover:hover){
+    .btn--success:hover{
+        @apply bg-green-700;
+    }
+}
+
+.card {
+    @apply relative z-[2] -left-2 overflow-hidden pb-4 w-[calc(100%+1rem)] rounded-t-[20px] rounded-b-none;
+}
+@media(min-width:1024px){
+    .card {
+        @apply w-full left-0;
+    }
+}
+.card--light{
+    @apply bg-secondary;
+}
+.card--primary{
+    @apply bg-card;
+}
+.card.card--primary .card__see-all{
+    @apply bg-secondary;
+}
+.card .card__see-all{
+    @apply font-bold text-xs py-1 px-3 bg-background rounded-[10px];
+}
+.card__title a{
+    @apply flex items-center text-sm font-bold;
+}
+.card__title a img, .card__title a object, .card__title a svg {
+    @apply mr-2;
+}
+.card__image{
+    @apply block w-full rounded-[5px];
+}
+.card__body{
+    @apply max-w-full;
+}
+.card--full{
+    @apply grid items-center grid-rows-[auto_1fr_auto];
+}
+.card--full .card__header{
+    @apply p-4 flex flex-row items-center justify-between;
+}
+.card--full .card__title{
+    @apply mb-0;
+}
+.card--full .card__cta{
+    @apply pt-2 px-4;
+}
+@media(min-width:1024px){
+    .card--full .card__cta{
+        @apply w-full max-w-80 justify-self-center;
+    }
+    .card--full .card__header{
+        @apply p-0;
+    }
+}
+.card--inline{
+    @apply grid gap-4 p-4 rounded-none items-center grid-cols-6;
+}
+.card--inline .card__title{
+    @apply justify-self-start py-4;
+}
+.card--inline .card__body{
+    @apply col-span-4;
+}
+.card--inline .card__see-all{
+    @apply col-span-1 justify-self-center;
+}
+.card--d.card--full .card__header{
+    @apply p-4;
+}
+.card--d.card--full .card__body{
+    @apply px-4;
+}
+
+.app-menu {
+  @apply bg-card shadow-inner;
+}
+
+.app-menu--primary {
+  @apply bg-card;
+}
+
+.app-menu--d {
+  @apply -mt-2;
+}
+
+.app-menu__item {
+  @apply p-0;
+}
+
+.app-menu__link {
+  @apply relative font-bold text-sm p-4 flex flex-col items-center justify-center text-foreground hover:text-primary transition-colors;
+}
+
+.app-menu__link > span {
+  @apply block mt-2 tracking-tight;
+}
+
+.app-menu__link.app-link--active {
+  @apply text-primary;
+}
+
+.brand-icon {
+  @apply h-8 w-8;
+}
+
+.app-menu--active {
+  @apply absolute -bottom-1 text-primary;
+}
+
+.app-menu ul {
+    @apply overflow-x-auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.app-menu ul::-webkit-scrollbar {
+    display: none;
+}
