@@ -1,11 +1,13 @@
+
 "use client";
 
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "../ui/button";
-import { ArrowDown, Gift, Home, LogOut, Mail, Newspaper, Star, ThumbsUp, User, Handshake, History, Contact, Activity, LifeBuoy, Languages, ArrowUp } from "lucide-react";
+import { Gift, Home, LogOut, Mail, Star, ThumbsUp, User, Handshake, History, Contact, Activity, ArrowUp } from "lucide-react";
 import { SidebarContent, SidebarFooter, SidebarHeader } from "../ui/sidebar";
 import Link from "next/link";
+
 
 const gameCategories = [
     { name: 'Sports+', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/sports.svg', href: '#' },
@@ -44,7 +46,7 @@ export const MobileNav = () => {
                         {gameCategories.map(cat => (
                             <li key={cat.name}>
                                 <a href={cat.href} className="flex flex-col items-center justify-center text-center space-y-2 text-xs font-bold text-white">
-                                    <Image src={cat.iconUrl} alt={cat.name} width={32} height={32} className="brand-icon" />
+                                    <Image src={cat.iconUrl} alt={cat.name} width={40} height={40} className="w-10 h-10 object-contain" />
                                     <span className="truncate w-full">{cat.name}</span>
                                 </a>
                             </li>
