@@ -6,24 +6,16 @@ import { Button } from "../ui/button";
 import { ArrowDown, Gift, Home, LogOut, Mail, Newspaper, Star, ThumbsUp, User, Handshake, History, Contact, Activity, LifeBuoy, Languages, ArrowUp } from "lucide-react";
 import { SidebarContent, SidebarFooter, SidebarHeader } from "../ui/sidebar";
 import Link from "next/link";
-import { SportsIcon } from '../icons/menu/sports-icon';
-import { SlotsIcon } from '../icons/menu/slots-icon';
-import { CasinoIcon } from '../icons/menu/casino-icon';
-import { LottoIcon } from '../icons/menu/lotto-icon';
-import { FishingIcon } from '../icons/menu/fishing-icon';
-import { PokerIcon } from '../icons/menu/poker-icon';
-import { ArcadeIcon } from '../icons/menu/arcade-icon';
-import { PromoIcon } from '../icons/menu/promo-icon';
 
 const gameCategories = [
-    { name: 'Sports+', Icon: SportsIcon, href: '#' },
-    { name: 'Slots', Icon: SlotsIcon, href: '#' },
-    { name: 'Casino', Icon: CasinoIcon, href: '#'},
-    { name: 'Lotto', Icon: LottoIcon, href: '#' },
-    { name: 'Fishing', Icon: FishingIcon, href: '#' },
-    { name: 'Poker', Icon: PokerIcon, href: '#' },
-    { name: 'Arcade', Icon: ArcadeIcon, href: '#' },
-    { name: 'Promosi', Icon: PromoIcon, href: '#' },
+    { name: 'Sports+', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/sports.svg', href: '#' },
+    { name: 'Slots', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/slots.svg', href: '#' },
+    { name: 'Casino', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/casino.svg', href: '#'},
+    { name: 'Lotto', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/lotto.svg', href: '#' },
+    { name: 'Fishing', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/fishing.svg', href: '#' },
+    { name: 'Poker', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/poker.svg', href: '#' },
+    { name: 'Arcade', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/arcade.svg', href: '#' },
+    { name: 'Promosi', iconUrl: 'https://cdn.globalcontentcloud.com/brand-icons/promo.svg', href: '#' },
 ];
 
 const mainNav = [
@@ -52,7 +44,7 @@ export const MobileNav = () => {
                         {gameCategories.map(cat => (
                             <li key={cat.name}>
                                 <a href={cat.href} className="flex flex-col items-center justify-center text-center space-y-2 text-xs font-bold text-white">
-                                    <cat.Icon className="w-10 h-10" />
+                                    <Image src={cat.iconUrl} alt={cat.name} width={32} height={32} className="brand-icon" />
                                     <span className="truncate w-full">{cat.name}</span>
                                 </a>
                             </li>
