@@ -20,6 +20,8 @@ import { usePathname } from 'next/navigation';
 export default function AccountPage() {
     const balance = "Rp 135.211.894";
     const pathname = usePathname();
+    const runningTextLine1 = "KEPADA YTH LEVIN SANTA JOY | PROSES WITHDRAW Rp 100.000.000 MASIH DALAM PROSES";
+    const runningTextLine2 = "MOHON MENUNGGU KAMI SEDANG PERBAIKAN SISTEM";
     
     return (
     <>
@@ -37,6 +39,31 @@ export default function AccountPage() {
                             <User className="w-10 h-10 p-2 bg-card text-white rounded-md" />
                             <h2 className="text-2xl font-bold text-white">Akun Saya</h2>
                         </div>
+                        
+                        {/* Running Text Section */}
+                        <div className="bg-red-900/20 border border-red-500/30 text-red-400 py-2 rounded-md overflow-hidden">
+                            <div className="relative flex overflow-x-hidden w-full">
+                                <div className="animate-marquee whitespace-nowrap">
+                                    <span className="mx-8 text-sm font-bold uppercase">{runningTextLine1}</span>
+                                    <span className="mx-8 text-sm font-bold uppercase">{runningTextLine1}</span>
+                                </div>
+                                <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                   <span className="mx-8 text-sm font-bold uppercase">{runningTextLine1}</span>
+                                   <span className="mx-8 text-sm font-bold uppercase">{runningTextLine1}</span>
+                                </div>
+                            </div>
+                             <div className="relative flex overflow-x-hidden w-full mt-1">
+                                <div className="animate-marquee whitespace-nowrap [animation-duration:50s]">
+                                    <span className="mx-8 text-sm font-bold uppercase">{runningTextLine2}</span>
+                                    <span className="mx-8 text-sm font-bold uppercase">{runningTextLine2}</span>
+                                </div>
+                                <div className="absolute top-0 animate-marquee2 whitespace-nowrap [animation-duration:50s]">
+                                   <span className="mx-8 text-sm font-bold uppercase">{runningTextLine2}</span>
+                                   <span className="mx-8 text-sm font-bold uppercase">{runningTextLine2}</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="bg-card p-3 rounded-md border border-border">
                             <div className="flex items-center gap-3">
                                 <Wallet className="h-6 w-6 text-primary" />
