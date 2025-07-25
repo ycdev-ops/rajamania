@@ -14,8 +14,8 @@ const navItems = [
     { name: 'Poker', href: '#', icon: '/assets/poker.41b5642.svg' },
     { name: 'Arcade', href: '#', icon: '/assets/arcade.3a38b14.svg' },
     { name: 'Promosi', href: '#', icon: '/assets/promo.57bb699.svg' },
-    { name: 'Leaderboard', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/leaderboard.png' },
-    { name: 'Referral', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/referral.png' },
+    { name: 'Leaderboard', href: '#', icon: '/assets/leaderboard.cd38ef0.svg' },
+    { name: 'Referral', href: '#', icon: '/assets/referral.1c64e87.svg' },
     { name: 'Kontak', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/contact.png' },
 ];
 
