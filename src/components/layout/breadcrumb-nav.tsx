@@ -6,14 +6,14 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
-    { name: 'Sports+', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/sports.png' },
-    { name: 'Slots', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/slots.png' },
-    { name: 'Casino', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/casino.png'},
-    { name: 'Lotto', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/lotto.png' },
-    { name: 'Fishing', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/fishing.png' },
-    { name: 'Poker', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/poker.png' },
-    { name: 'Arcade', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/arcade.png' },
-    { name: 'Promosi', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/promo.png' },
+    { name: 'Sports+', href: '#', icon: '/assets/sports.5879738.svg' },
+    { name: 'Slots', href: '#', icon: '/assets/slots.ddf496a.svg' },
+    { name: 'Casino', href: '#', icon: '/assets/casino.01e8b7b.svg'},
+    { name: 'Lotto', href: '#', icon: '/assets/lotto.6e10ea7.svg' },
+    { name: 'Fishing', href: '#', icon: '/assets/fishing.62277f4.svg' },
+    { name: 'Poker', href: '#', icon: '/assets/poker.41b5642.svg' },
+    { name: 'Arcade', href: '#', icon: '/assets/arcade.3a38b14.svg' },
+    { name: 'Promosi', href: '#', icon: '/assets/promo.57bb699.svg' },
     { name: 'Leaderboard', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/leaderboard.png' },
     { name: 'Referral', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/referral.png' },
     { name: 'Kontak', href: '#', icon: 'https://rajamaniasol.com/assets/images/icons/menu-items/contact.png' },
@@ -30,7 +30,7 @@ const NavMenu = () => {
 
     return (
         <nav className="app-menu app-menu--primary">
-             <ul className="flex items-stretch justify-start">
+             <ul className="flex items-stretch justify-start overflow-x-auto hide-scrollbar">
                 {navItems.map((item) => (
                     <li key={item.name} className="app-menu__item flex-shrink-0">
                         <Link href={item.href} className={cn("app-menu__link", isActive(item.href) && 'app-menu--active')}>
