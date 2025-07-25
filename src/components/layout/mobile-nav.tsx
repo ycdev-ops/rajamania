@@ -10,14 +10,14 @@ import Link from "next/link";
 
 
 const gameCategories = [
-    { name: 'Sports+', iconUrl: 'https://rajamaniaman.com/img/menu/sports.svg', href: '#' },
-    { name: 'Slots', iconUrl: 'https://rajamaniaman.com/img/menu/slots.svg', href: '#' },
-    { name: 'Casino', iconUrl: 'https://rajamaniaman.com/img/menu/casino.svg', href: '#'},
-    { name: 'Lotto', iconUrl: 'https://rajamaniaman.com/img/menu/lotto.svg', href: '#' },
-    { name: 'Fishing', iconUrl: 'https://rajamaniaman.com/img/menu/fishing.svg', href: '#' },
-    { name: 'Poker', iconUrl: 'https://rajamaniaman.com/img/menu/poker.svg', href: '#' },
-    { name: 'Arcade', iconUrl: 'https://rajamaniaman.com/img/menu/arcade.svg', href: '#' },
-    { name: 'Promosi', iconUrl: 'https://rajamaniaman.com/img/menu/promo.svg', href: '#' },
+    { name: 'Sports+', iconUrl: 'https://rajamaniaman.com/img/menu/sports.svg', href: '/id/sports' },
+    { name: 'Slots', iconUrl: 'https://rajamaniaman.com/img/menu/slots.svg', href: '/id/slot/category/hot' },
+    { name: 'Casino', iconUrl: 'https://rajamaniaman.com/img/menu/casino.svg', href: '/id/casino'},
+    { name: 'Lotto', iconUrl: 'https://rajamaniaman.com/img/menu/lotto.svg', href: '/id/lotto' },
+    { name: 'Fishing', iconUrl: 'https://rajamaniaman.com/img/menu/fishing.svg', href: '/id/fishing' },
+    { name: 'Poker', iconUrl: 'https://rajamaniaman.com/img/menu/poker.svg', href: '/id/poker' },
+    { name: 'Arcade', iconUrl: 'https://rajamaniaman.com/img/menu/arcade.svg', href: '/id/arcade/category/hot' },
+    { name: 'Promosi', iconUrl: 'https://rajamaniaman.com/img/menu/promo.svg', href: '/id/promotions' },
 ];
 
 const mainNav = [
