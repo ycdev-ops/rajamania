@@ -6,16 +6,24 @@ import { Button } from "../ui/button";
 import { ArrowDown, Gift, Home, LogOut, Mail, Newspaper, Star, ThumbsUp, User, Handshake, History, Contact, Activity, LifeBuoy, Languages, ArrowUp } from "lucide-react";
 import { SidebarContent, SidebarFooter, SidebarHeader } from "../ui/sidebar";
 import Link from "next/link";
+import { SportsIcon } from '../icons/menu/sports-icon';
+import { SlotsIcon } from '../icons/menu/slots-icon';
+import { CasinoIcon } from '../icons/menu/casino-icon';
+import { LottoIcon } from '../icons/menu/lotto-icon';
+import { FishingIcon } from '../icons/menu/fishing-icon';
+import { PokerIcon } from '../icons/menu/poker-icon';
+import { ArcadeIcon } from '../icons/menu/arcade-icon';
+import { PromoIcon } from '../icons/menu/promo-icon';
 
 const gameCategories = [
-    { name: 'Sports+', icon: 'https://rajamaniaman.com/img/menu/sports.svg', href: '#' },
-    { name: 'Slots', icon: 'https://rajamaniaman.com/img/menu/slots.svg', href: '#' },
-    { name: 'Casino', icon: 'https://rajamaniaman.com/img/menu/casino.svg', href: '#'},
-    { name: 'Lotto', icon: 'https://rajamaniaman.com/img/menu/lotto.svg', href: '#' },
-    { name: 'Fishing', icon: 'https://rajamaniaman.com/img/menu/fishing.svg', href: '#' },
-    { name: 'Poker', icon: 'https://rajamaniaman.com/img/menu/poker.svg', href: '#' },
-    { name: 'Arcade', icon: 'https://rajamaniaman.com/img/menu/arcade.svg', href: '#' },
-    { name: 'Promosi', icon: 'https://rajamaniaman.com/img/menu/promo.svg', href: '#' },
+    { name: 'Sports+', Icon: SportsIcon, href: '#' },
+    { name: 'Slots', Icon: SlotsIcon, href: '#' },
+    { name: 'Casino', Icon: CasinoIcon, href: '#'},
+    { name: 'Lotto', Icon: LottoIcon, href: '#' },
+    { name: 'Fishing', Icon: FishingIcon, href: '#' },
+    { name: 'Poker', Icon: PokerIcon, href: '#' },
+    { name: 'Arcade', Icon: ArcadeIcon, href: '#' },
+    { name: 'Promosi', Icon: PromoIcon, href: '#' },
 ];
 
 const mainNav = [
@@ -44,7 +52,7 @@ export const MobileNav = () => {
                         {gameCategories.map(cat => (
                             <li key={cat.name}>
                                 <a href={cat.href} className="flex flex-col items-center justify-center text-center space-y-2 text-xs font-bold text-white">
-                                    <Image src={cat.icon} alt={cat.name} width={40} height={40} className="w-10 h-10" />
+                                    <cat.Icon className="w-10 h-10" />
                                     <span className="truncate w-full">{cat.name}</span>
                                 </a>
                             </li>
