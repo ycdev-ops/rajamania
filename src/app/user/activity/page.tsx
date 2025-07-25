@@ -13,6 +13,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { ListOrdered } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BreadcrumbNav } from '@/components/layout/breadcrumb-nav';
+import { usePathname } from 'next/navigation';
 
 const activityData = [
     { id: '#3151866', service: 'request', type: 'Penarikan', amount: 'Rp 100.000.000', status: 'Menunggu', updated: '18/7/2025, 10:30' },
@@ -62,6 +63,7 @@ type ActivityTab = 'Saldo' | 'Casino' | 'Sports';
 
 export default function ActivityPage() {
     const [activeTab, setActiveTab] = useState<ActivityTab>('Casino');
+    const pathname = usePathname();
 
     return (
     <>
@@ -172,5 +174,3 @@ export default function ActivityPage() {
     </>
     );
 }
-
-    

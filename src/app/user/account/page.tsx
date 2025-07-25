@@ -1,3 +1,6 @@
+
+"use client";
+
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Sidebar, SidebarInset } from '@/components/ui/sidebar';
@@ -12,9 +15,12 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { User, Mail, Phone, Calendar as CalendarIcon, MapPin, Building, Landmark, Wallet } from "lucide-react";
 import { ChangePasswordForm } from '@/components/sections/change-password-form';
 import { BreadcrumbNav } from '@/components/layout/breadcrumb-nav';
+import { usePathname } from 'next/navigation';
 
 export default function AccountPage() {
     const balance = "Rp 135.211.894";
+    const pathname = usePathname();
+    
     return (
     <>
       <Sidebar side="left" collapsible="offcanvas">

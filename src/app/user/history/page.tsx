@@ -1,4 +1,6 @@
 
+"use client";
+
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Sidebar, SidebarInset } from '@/components/ui/sidebar';
@@ -7,6 +9,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { History } from 'lucide-react';
 import { BreadcrumbNav } from '@/components/layout/breadcrumb-nav';
 import { HistoryItem, type HistoryItemProps } from '@/components/sections/history-item';
+import { usePathname } from 'next/navigation';
 
 const historyData: HistoryItemProps[] = [
     {
@@ -206,6 +209,7 @@ const groupHistoryByDate = (history: HistoryItemProps[]) => {
 
 export default function HistoryPage() {
     const groupedHistory = groupHistoryByDate(historyData);
+    const pathname = usePathname();
 
     return (
     <>

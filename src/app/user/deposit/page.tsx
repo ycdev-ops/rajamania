@@ -16,6 +16,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Handshake, Info, Landmark, Edit, Circle, Coins, Pen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BreadcrumbNav } from '@/components/layout/breadcrumb-nav';
+import { usePathname } from 'next/navigation';
 
 type DepositTab = 'otomatis' | 'bank' | 'emoney';
 
@@ -129,6 +130,7 @@ const DepositForm = () => {
 
 export default function DepositPage() {
     const [activeTab, setActiveTab] = useState<DepositTab>('bank');
+    const pathname = usePathname();
     
     return (
     <>

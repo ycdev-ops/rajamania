@@ -13,8 +13,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { BreadcrumbNav } from '@/components/layout/breadcrumb-nav';
 import { WithdrawNotes } from '@/components/sections/withdraw-notes';
+import { usePathname } from 'next/navigation';
 
 export default function WithdrawPage() {
+  const pathname = usePathname();
   return (
     <>
       <Sidebar side="left" collapsible="offcanvas">
@@ -66,5 +68,3 @@ export default function WithdrawPage() {
     </>
   );
 }
-
-    

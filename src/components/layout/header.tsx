@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, User, Mail, Wallet, Handshake, LogOut } from 'lucide-react';
 import { SidebarTrigger } from '../ui/sidebar';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 export const Header = () => {
   const loggedIn = true; // Set to true to show logged-in state
@@ -17,9 +18,9 @@ export const Header = () => {
             <Menu className="h-6 w-6" />
           </SidebarTrigger>
           
-          <a href="/" aria-label="Home">
+          <Link href="/" aria-label="Home">
             <Logo className="h-9 w-auto" />
-          </a>
+          </Link>
         </div>
 
         {loggedIn ? (

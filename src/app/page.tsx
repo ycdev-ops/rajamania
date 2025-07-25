@@ -15,9 +15,11 @@ import { Sidebar, SidebarInset } from '@/components/ui/sidebar';
 import { MobileNav } from '@/components/layout/mobile-nav';
 import { LeftFloatingPromo } from '@/components/sections/left-floating-promo';
 import { BreadcrumbNav } from '@/components/layout/breadcrumb-nav';
+import { usePathname } from 'next/navigation';
 
 export default function Home() {
   const liveChatRef = useRef<LiveChatRef>(null);
+  const pathname = usePathname();
 
   return (
     <>
